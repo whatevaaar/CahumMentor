@@ -81,7 +81,7 @@ class MenuActivity : AppCompatActivity() {
         when (item.itemId) {
             R.id.menu_sign_out -> {
                 FirebaseAuth.getInstance().signOut()
-                val intent = Intent(this, RegistrarActivity::class.java)
+                val intent = Intent(this, InicioActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
                 startActivity(intent)
             }
