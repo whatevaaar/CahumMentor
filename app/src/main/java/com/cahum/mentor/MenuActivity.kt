@@ -92,6 +92,10 @@ class MenuActivity : AppCompatActivity() {
             R.id.menu_nuevos_clientes -> {
                 startActivity(Intent(this, NuevosClientesActivity::class.java))
             }
+
+            R.id.menu_calendario -> {
+                startActivity(Intent(this, CalendarioActivity::class.java))
+            }
         }
         return super.onOptionsItemSelected(item)
     }

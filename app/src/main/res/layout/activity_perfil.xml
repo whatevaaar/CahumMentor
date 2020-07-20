@@ -7,4 +7,68 @@
         android:layout_height="match_parent"
         tools:context=".PerfilActivity">
 
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:civ_border_width="3dp"
+            android:src="@drawable/ic_launcher_foreground"
+            app:civ_border_color="#FF000000" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="VectorDrawableCompat"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" app:layout_constraintVertical_bias="0.082"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@android:drawable/btn_star_big_off"
+            android:id="@+id/img_estrella_1"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="70dp"
+            android:contentDescription="@string/desc_img_estrella"
+            app:layout_constraintTop_toTopOf="@+id/img_estrella_3" android:layout_marginStart="70dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@android:drawable/btn_star_big_off"
+            android:id="@+id/img_estrella_2"
+            app:layout_constraintStart_toEndOf="@+id/img_estrella_1" android:layout_marginLeft="30dp"
+            android:contentDescription="@string/desc_img_estrella"
+            app:layout_constraintTop_toTopOf="@+id/img_estrella_3" android:layout_marginStart="30dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@android:drawable/btn_star_big_off"
+            android:id="@+id/img_estrella_3"
+            app:layout_constraintEnd_toStartOf="@+id/img_estrella_4"
+            app:layout_constraintStart_toEndOf="@+id/img_estrella_2" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginRight="8dp" android:layout_marginEnd="8dp"
+            android:contentDescription="@string/desc_img_estrella"
+            app:layout_constraintTop_toBottomOf="@+id/texto_correo_perfil_mentor" android:layout_marginTop="128dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@android:drawable/btn_star_big_off"
+            android:id="@+id/img_estrella_4"
+            app:layout_constraintEnd_toStartOf="@+id/img_estrella_5" android:layout_marginRight="30dp"
+            android:contentDescription="@string/desc_img_estrella"
+            app:layout_constraintTop_toTopOf="@+id/img_estrella_3" android:layout_marginEnd="30dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@android:drawable/btn_star_big_off"
+            android:id="@+id/img_estrella_5"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="70dp"
+            app:layout_constraintTop_toTopOf="@+id/img_estrella_3"
+            android:contentDescription="@string/desc_img_estrella"
+            android:layout_marginEnd="70dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/texto_nombre_perfil_mentor"
+            tools:text="Mentor Mentorin Mentorcillo"
+            android:textColor="#000000" android:textSize="18sp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_image2" android:layout_marginTop="64dp"
+            android:layout_marginLeft="32dp" android:layout_marginStart="32dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/texto_correo_perfil_mentor"
+            tools:text="mentor@correo.com"
+            android:textColor="#000000" android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/texto_nombre_perfil_mentor"
+            app:layout_constraintTop_toBottomOf="@+id/texto_nombre_perfil_mentor" android:layout_marginTop="24dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

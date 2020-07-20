@@ -32,4 +32,6 @@
     <string name="texto_password">Contraseña</string>
     <string name="texto_nombre">Nombre</string>
     <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="item_calendario">Calendario</string>
+    <string name="desc_img_estrella">Img de estrella</string>
 </resources>
