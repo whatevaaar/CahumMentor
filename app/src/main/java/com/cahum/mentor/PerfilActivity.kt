@@ -44,5 +44,7 @@ class PerfilActivity : AppCompatActivity() {
         if (calificacion > 2) img_estrella_3.setImageResource(android.R.drawable.btn_star_big_on)
         if (calificacion > 3) img_estrella_4.setImageResource(android.R.drawable.btn_star_big_on)
         if (calificacion > 4) img_estrella_5.setImageResource(android.R.drawable.btn_star_big_on)
-        }
+    }
+
+
 }

@@ -34,4 +34,9 @@
     <string name="iniciar_sesion">Iniciar Sesión</string>
     <string name="item_calendario">Calendario</string>
     <string name="desc_img_estrella">Img de estrella</string>
+    <string name="checkbox_cv">Currículum de alto impacto</string>
+    <string name="checkbox_linkedin">Perfil de LinkedIn</string>
+    <string name="checkbox_simulador">Simulador de entrevista</string>
+    <string name="checkbox_psicometria">Psicometría</string>
+    <string name="checkbox_estrategia">Estrategia de busqueda de empleo</string>
 </resources>
