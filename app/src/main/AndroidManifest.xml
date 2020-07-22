@@ -10,15 +10,18 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity android:name=".PerfilCliente">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".ChatLogActivity"/>
         </activity>
         <activity android:name=".CalendarioActivity">
         </activity>
-        <activity android:name=".ChatLogActivity">
+        <activity android:name=".ChatLogActivity"  android:launchMode="singleTop">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".MenuActivity"/>
         </activity>
-        <activity android:name=".PerfilActivity">
+        <activity android:name=".PerfilActivity" >
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".MenuActivity"/>

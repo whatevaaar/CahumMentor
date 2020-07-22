@@ -104,4 +104,5 @@ class ChatLogActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
 }

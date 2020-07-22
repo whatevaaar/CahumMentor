@@ -64,6 +64,7 @@ class PerfilCliente : AppCompatActivity() {
 
     private fun actualizarPantalla() {
         texto_nombre_perfil_cliente.text = cliente!!.nombre
+        supportActionBar?.title = "Perfil de ${cliente!!.nombre}"
         establecerCheckbox()
     }
 

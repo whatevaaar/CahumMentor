@@ -37,5 +37,6 @@
             app:layout_constraintBottom_toBottomOf="@+id/texto_mensaje"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@+id/texto_mensaje"
             app:backgroundTint="#02ee90" android:focusable="true"
-            android:layout_marginTop="8dp" android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="16dp" android:layout_marginTop="16dp" android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,29 +31,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/checkBoxCv"
             app:layout_constraintStart_toStartOf="@+id/texto_nombre_perfil_cliente"
+            android:buttonTint="@color/colorPrimary"
             app:layout_constraintTop_toBottomOf="@+id/texto_nombre_perfil_cliente" android:layout_marginTop="64dp"/>
     <CheckBox
             android:text="@string/checkbox_linkedin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/checkBoxLinkedin"
             app:layout_constraintStart_toStartOf="@+id/checkBoxCv"
+            android:buttonTint="@color/colorPrimary"
             app:layout_constraintTop_toBottomOf="@+id/checkBoxCv" android:layout_marginTop="16dp"/>
     <CheckBox
             android:text="@string/checkbox_simulador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/checkBoxSimulador"
             app:layout_constraintStart_toStartOf="@+id/checkBoxCv"
+            android:buttonTint="@color/colorPrimary"
             app:layout_constraintTop_toBottomOf="@+id/checkBoxLinkedin" android:layout_marginTop="16dp"/>
     <CheckBox
             android:text="@string/checkbox_psicometria"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/checkBoxPsicometria"
             app:layout_constraintStart_toStartOf="@+id/checkBoxCv" android:layout_marginTop="16dp"
+            android:buttonTint="@color/colorPrimary"
             app:layout_constraintTop_toBottomOf="@+id/checkBoxSimulador"/>
     <CheckBox
             android:text="@string/checkbox_estrategia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/checkBoxEstrategia"
             app:layout_constraintTop_toBottomOf="@+id/checkBoxPsicometria"
+            android:buttonTint="@color/colorPrimary"
             app:layout_constraintStart_toStartOf="@+id/checkBoxCv" android:layout_marginTop="16dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

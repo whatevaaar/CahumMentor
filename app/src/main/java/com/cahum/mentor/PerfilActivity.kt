@@ -35,15 +35,8 @@ class PerfilActivity : AppCompatActivity() {
     private fun actualizarPantalla(mentor: Mentor) {
         texto_nombre_perfil_mentor.text = usuario!!.displayName
         texto_correo_perfil_mentor.text = usuario.email
-        establecerEstrellas(mentor.calificacion)
-    }
-
-    private fun establecerEstrellas(calificacion: Double) {
-        if (calificacion > 0) img_estrella_1.setImageResource(android.R.drawable.btn_star_big_on)
-        if (calificacion > 1) img_estrella_2.setImageResource(android.R.drawable.btn_star_big_on)
-        if (calificacion > 2) img_estrella_3.setImageResource(android.R.drawable.btn_star_big_on)
-        if (calificacion > 3) img_estrella_4.setImageResource(android.R.drawable.btn_star_big_on)
-        if (calificacion > 4) img_estrella_5.setImageResource(android.R.drawable.btn_star_big_on)
+        ratingBar.rating = mentor.calificacion.toFloat()
+        supportActionBar?.title = "Perfil de ${mentor.nombre}"
     }
 
 
