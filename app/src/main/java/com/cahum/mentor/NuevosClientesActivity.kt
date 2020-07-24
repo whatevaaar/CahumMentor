@@ -36,6 +36,7 @@ private fun conseguirClientes(vista: RecyclerView) {
         }
 
         override fun onDataChange(dataSnapshot: DataSnapshot) {
+            adapter.clear()
             dataSnapshot.children.forEach {
                 val cliente = it.getValue(Cliente::class.java)
                 if (cliente != null && cliente.uidMentor.isEmpty()) adapter.add(UserItem(cliente))
@@ -45,7 +46,7 @@ private fun conseguirClientes(vista: RecyclerView) {
         }
 
     }
-    ref.addListenerForSingleValueEvent(postListener)
+    ref.addValueEventListener(postListener)
 }
 
 private fun agregarListener(adapter: GroupAdapter<GroupieViewHolder>) {
