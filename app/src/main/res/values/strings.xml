@@ -41,4 +41,6 @@
     <string name="checkbox_estrategia">Estrategia de busqueda de empleo</string>
     <string name="boton_cita">Crear Cita</string>
     <string name="texto_cita_con">"Cita con "</string>
+    <string name="texto_hora">Hora</string>
+    <string name="texto_duracion">Duración:</string>
 </resources>

@@ -15,6 +15,9 @@
                     android:value=".ChatLogActivity"/>
         </activity>
         <activity android:name=".CalendarioActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".MenuActivity"/>
         </activity>
         <activity android:name=".ChatLogActivity"  android:launchMode="singleTop">
             <meta-data
