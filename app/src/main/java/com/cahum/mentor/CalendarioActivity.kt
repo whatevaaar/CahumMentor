@@ -1,5 +1,6 @@
 package com.cahum.mentor
 
+import android.app.TimePickerDialog
 import android.content.Intent
 import android.icu.util.Calendar
 import android.os.Build
@@ -19,6 +20,8 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.activity_calendario.*
+import java.text.SimpleDateFormat
+import kotlin.collections.ArrayList
 
 
 class CalendarioActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
@@ -36,15 +39,26 @@ class CalendarioActivity : AppCompatActivity(), AdapterView.OnItemSelectedListen
         setContentView(R.layout.activity_calendario)
         spinnerClientes!!.onItemSelectedListener = this
         spinnerDuracion!!.onItemSelectedListener = this
+        textoHora.text = SimpleDateFormat("HH:mm").format(fechaSeleccionada.time)
         crearAdaptadorSpinnerDuracion()
         conseguirClientes()
+
         //Listeners
-        calendario.setOnDateChangeListener { view, year, month, dayOfMonth ->
+        calendario.setOnDateChangeListener { _, year, month, dayOfMonth ->
             fechaSeleccionada.set(year, month, dayOfMonth)
         }
         botonCrearCita.setOnClickListener {
             crearCitaEnDB()
             crearCitaEnCalendario()
+        }
+        textoHora.setOnClickListener {
+            val cal = Calendar.getInstance()
+            val timeSetListener = TimePickerDialog.OnTimeSetListener { _, hour, minute ->
+                cal.set(Calendar.HOUR_OF_DAY, hour)
+                cal.set(Calendar.MINUTE, minute)
+                textoHora.text = SimpleDateFormat("HH:mm").format(cal.time)
+            }
+            TimePickerDialog(this, timeSetListener, cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE), true).show()
         }
     }
 
@@ -66,11 +80,12 @@ class CalendarioActivity : AppCompatActivity(), AdapterView.OnItemSelectedListen
         val cita = crearCita()
         refMandar.setValue(cita)
             .addOnSuccessListener {
-                Toast.makeText(this,"Cita registrada con éxito", Toast.LENGTH_LONG)
+                Toast.makeText(this, "Cita registrada con éxito", Toast.LENGTH_LONG)
             }
     }
 
-    private fun crearCita(): Cita = Cita(uidMentor!!, uidCliente, fechaSeleccionada,)
+    private fun crearCita(): Cita =
+        Cita(uidMentor!!, uidCliente, SimpleDateFormat("dd-MM-yyyy").format(fechaSeleccionada.time), textoHora.text as String, duracion == 0, duracion)
 
     private fun crearAdaptadorSpinnerDuracion() {
         val adaptador = ArrayAdapter(this, android.R.layout.simple_spinner_item, opcionesDuracion)
@@ -117,6 +132,7 @@ class CalendarioActivity : AppCompatActivity(), AdapterView.OnItemSelectedListen
             spinnerDuracion.id -> duracion = swichDuracion(position)
         }
     }
+
     private fun swichDuracion(position: Int): Int {
         when (position) {
             0 -> return 30

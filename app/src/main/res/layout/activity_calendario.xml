@@ -23,25 +23,29 @@
             app:layout_constraintTop_toBottomOf="@+id/calendario" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
     <Spinner
-            android:layout_width="212dp"
-            android:layout_height="20dp" android:id="@+id/spinnerClientes"
-            app:layout_constraintTop_toBottomOf="@+id/calendario"
-            android:layout_marginTop="32dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.65"/>
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/spinnerClientes"
+            app:layout_constraintStart_toEndOf="@+id/textViewCita"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginEnd="32dp" app:layout_constraintBottom_toBottomOf="@+id/textViewCita"
+            app:layout_constraintTop_toTopOf="@+id/textViewCita"/>
     <TextView
             android:text="@string/texto_cita_con"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textViewCita"
-            app:layout_constraintEnd_toStartOf="@+id/spinnerClientes" app:layout_constraintTop_toTopOf="@+id/spinnerClientes"
-            android:textStyle="bold" android:textSize="18sp" app:layout_constraintBottom_toBottomOf="@+id/spinnerClientes"/>
+            android:textStyle="bold" android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintTop_toBottomOf="@+id/calendario" android:layout_marginTop="32dp"/>
     <TextView
             android:text="@string/texto_hora"
-            android:layout_width="40dp"
-            android:layout_height="22dp" android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView2"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@+id/textViewCita"
-            app:layout_constraintStart_toStartOf="@+id/textViewCita" android:layout_marginTop="24dp"/>
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.13"/>
     <TextView
             android:text="@string/texto_duracion"
             android:layout_width="wrap_content"
@@ -49,7 +53,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/textoHora" app:layout_constraintTop_toTopOf="@+id/textView2"
-            app:layout_constraintBottom_toBottomOf="@+id/textView2" android:layout_marginLeft="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
             android:layout_marginStart="16dp"/>
     <TextView
             android:text="TextView"
@@ -58,11 +62,11 @@
             app:layout_constraintTop_toTopOf="@+id/textView2" app:layout_constraintBottom_toBottomOf="@+id/textView2"
             android:textSize="18sp" android:lineSpacingExtra="8sp" android:textStyle="bold" tools:text="15:45"
             android:textColor="@color/colorPrimary" app:layout_constraintStart_toEndOf="@+id/textView2"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
+            android:layout_marginStart="8dp"/>
     <Spinner
             android:layout_width="0dp"
             android:layout_height="wrap_content" android:id="@+id/spinnerDuracion"
             app:layout_constraintTop_toTopOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="@+id/spinnerClientes" app:layout_constraintStart_toEndOf="@+id/textView"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
+            app:layout_constraintHorizontal_bias="0.0"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
