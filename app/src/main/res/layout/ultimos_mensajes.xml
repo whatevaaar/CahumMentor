@@ -3,7 +3,8 @@
                                                    xmlns:app="http://schemas.android.com/apk/res-auto"
                                                    xmlns:tools="http://schemas.android.com/tools"
                                                    android:layout_width="match_parent"
-                                                   android:layout_height="wrap_content">
+                                                   android:layout_height="wrap_content"
+                                                   android:background="@color/colorPrimaryDark">
 
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -12,8 +13,8 @@
             android:layout_height="70dp"
             android:src="@drawable/ic_launcher_foreground"
             app:civ_border_width="2dp"
-            app:civ_border_color="#FF000000" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            app:civ_border_color="@color/colorPrimary" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.0" android:layout_marginTop="8dp" android:layout_marginBottom="8dp"/>
     <TextView
@@ -23,13 +24,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintBottom_toTopOf="@+id/texto_ultimo_mensaje"
-            app:layout_constraintVertical_chainStyle="packed" android:textStyle="bold" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"/>
+            app:layout_constraintVertical_chainStyle="packed" android:textStyle="bold"
+            android:layout_marginStart="8dp" android:textColor="@color/colorAccent"/>
     <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content" android:id="@+id/texto_ultimo_mensaje"
             tools:text="Este fue el ultimo mensaje enviado" app:layout_constraintStart_toEndOf="@+id/profile_image"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_nombre_usuario" app:layout_constraintHorizontal_bias="0.5"
-            android:layout_marginTop="8dp" android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
+            android:layout_marginTop="8dp" android:layout_marginStart="8dp" android:textColorLink="@color/colorAccent"
+            android:textColor="@color/colorAccent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

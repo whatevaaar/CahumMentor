@@ -43,4 +43,5 @@
     <string name="texto_cita_con">"Cita con "</string>
     <string name="texto_hora">Hora</string>
     <string name="texto_duracion">Duración:</string>
+    <string name="texto_terminos_y_condiciones">He leído los términos y condiciones</string>
 </resources>
